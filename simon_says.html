@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simon Says Game</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      background-color: #121212ce;
+    }
+    h1 {
+      margin-top: 30px;
+      color: white;
+      font-family: 'Press Start 2P', cursive;
+    }
+    #startBtn {
+      padding: 10px 20px;
+      font-size: 1em;
+      border: 2px solid white;
+      background-color: transparent;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    #startBtn:hover {
+      background-color: white;
+      color: #121212a0;
+    }
+    .score {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: white;
+    }
+    .game-board {
+      display: grid;
+      grid-template-columns: repeat(2, 150px);
+      gap: 20px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    .btn {
+      width: 150px;
+      height: 150px;
+      border: none;
+      border-radius: 50%;
+      opacity: 0.8;
+      cursor: pointer;
+    }
+    .blue {
+      background-color: #4936f4;
+    }
+    .purple {
+      background-color: #582277;
+    }
+    .magenta {
+      background-color: #52164d;
+    }
+    .pink {
+      background-color: #c22887;
+    }
+    .flash {
+      opacity: 1 !important;
+      box-shadow: 0 0 20px white;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Simon Says</h1>
+  <button id="startBtn">Start Game</button>
+  <div class="score">Score: <span id="score">0</span></div>
+  <div class="score">High Score: <span id="highScore">0</span></div>
+  <div class="game-board">
+    <button class="btn blue" data-color="blue"></button>
+    <button class="btn purple" data-color="purple"></button>
+    <button class="btn magenta" data-color="magenta"></button>
+    <button class="btn pink" data-color="pink"></button>    
+  </div>
+  <script src="simon_says.js"></script>
+</body>
+</html>
